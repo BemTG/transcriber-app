@@ -5,8 +5,8 @@ import pandas as pd
 import time as time
 application= app = Flask(__name__)
 
-aws_access_key_id='AKIAXQGTBX4M3LBUZQRY'
-aws_secret_access_key= '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'
+aws_access_key_id='AKIAXQGTBX4M3ZZOTCN2'
+aws_secret_access_key= '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'
 
 
 s3 = boto3.resource('s3',
