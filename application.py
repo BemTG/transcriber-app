@@ -6,7 +6,7 @@ import time as time
 application= app = Flask(__name__)
 
 aws_access_key_id='123123123'
-aws_secret_access_key= ''
+aws_secret_access_key= '123'
 
 
 s3 = boto3.resource('s3',
