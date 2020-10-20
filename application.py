@@ -3,10 +3,37 @@ import boto3
 from werkzeug.utils import secure_filename
 import pandas as pd
 import time as time
+from cryptography.fernet import Fernet
+import os 
+import sys
+
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.append(parentdir)
+
+import key
+import api
+
+crypter= Fernet(key.key)
+
+aws_access_key_id= crypter.decrypt(api.acc_keyid)
+aws_access_key_id=aws_access_key_id.decode("utf-8")
+
+aws_secret_access_key= crypter.decrypt(api.sec_keyid)
+aws_secret_access_key=aws_secret_access_key.decode("utf-8")
+
+
+
+
+
 application= app = Flask(__name__)
 
-aws_access_key_id='123123123'
-aws_secret_access_key= ''
+
+
+
+
+# aws_access_key_id='12323'
+# aws_secret_access_key= ''
 
 
 s3 = boto3.resource('s3',
