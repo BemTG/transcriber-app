@@ -21,10 +21,10 @@ import api
 
 
 
-aws_access_key_id= crypter.decrypt(acc_keyid)
+aws_access_key_id= crypter.decrypt(api.acc_keyid)
 aws_access_key_id=aws_access_key_id.decode("utf-8")
 
-aws_secret_access_key= crypter.decrypt(sec_keyid)
+aws_secret_access_key= crypter.decrypt(api.sec_keyid)
 aws_secret_access_key=aws_secret_access_key.decode("utf-8")
 
 
