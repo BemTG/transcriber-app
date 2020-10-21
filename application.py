@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 import boto3
 from werkzeug.utils import secure_filename
-import pandas as pd
 import time as time
 from cryptography.fernet import Fernet
 import os 
