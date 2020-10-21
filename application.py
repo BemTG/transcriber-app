@@ -6,16 +6,18 @@ from cryptography.fernet import Fernet
 import os 
 import sys
 
-currentdir = os.path.dirname(os.path.realpath(__file__))
-parentdir = os.path.dirname(currentdir)
-sys.path.append(parentdir)
+# currentdir = os.path.dirname(os.path.realpath(__file__))
+# parentdir = os.path.dirname(currentdir)
+# sys.path.append(parentdir)
 
-import key
+key=b'nYGePYkhuWF-Q9XejqSyfn1EcI9ZBpVdppMrsrHuV48='
 
-crypter= Fernet(key.key)
+crypter= Fernet(key)
 
-acc_keyid=b'gAAAAABfj2y2SbMoxazBxPZqke59GQCbjkCjLUoxWX3yFbGkCOlTAZfTcThH-qmUA3WPa7_jPGUaHUQvwPIwA28LBa9Y4KugMjrVNtPwWwPldPy-6fAUuUM='
-sec_keyid=b'gAAAAABfj21W1V35AOcVTP9QBBw5IDLS67OKZ1d-yyx4sj_6XGevY49wc3ew9t7MzxjxUjO9PemZ5uVE8U6hnj-0TFcpLL-fJM-8ch1VlkuyRkaSt9i03aTUFQa8-ZlBFq3G3t0zvCxV'
+import api
+
+
+
 
 
 
